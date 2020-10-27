@@ -27,7 +27,7 @@ class ProductoController {
 
         try {
             productoService.save(producto)
-        } catch (ValidationException e) {
+        } catch (ValidationException ignored) {
             respond producto.errors, view:'create'
             return
         }
@@ -43,7 +43,7 @@ class ProductoController {
 
         try {
             productoService.save(producto)
-        } catch (ValidationException e) {
+        } catch (ValidationException ignored) {
             respond producto.errors, view:'edit'
             return
         }
